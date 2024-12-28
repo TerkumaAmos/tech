@@ -15,10 +15,10 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          backgroundColor: const Color(0xFF1A1B35), // Dark blue background
+          backgroundColor: Color(0xFF1A1B35), // Dark blue background
           body: SignIn()
           // Column(
           //   children: [
