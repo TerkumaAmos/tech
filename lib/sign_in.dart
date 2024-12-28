@@ -13,12 +13,26 @@ class _SignInState extends State<SignIn> {
     return const Scaffold(
       backgroundColor: Color(0xFF1A1B35),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Expanded(
-            child: Text(
-              'Sign In',
-              style: TextStyle(color: Colors.white),
+            flex: 2,
+            child: Stack(
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Center(
+                      child: Text(
+                        'Sign In',
+                        style: TextStyle(
+                          color: Colors.yellow,
+                          fontSize: 24,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
             ),
           )
         ],
