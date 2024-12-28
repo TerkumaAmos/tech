@@ -35,20 +35,36 @@ class _SignInState extends State<SignIn> {
                       height: 20,
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 60.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 80.0),
                       child: Column(
                         children: [
                           ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.orange,
-                              minimumSize: Size(double.infinity, 60),
+                              minimumSize: const Size(double.infinity, 60),
                             ),
-                            child: const Text(
-                              "Sign In With Google",
-                              style: TextStyle(color: Colors.white),
+                            child: const Row(
+                              children: [
+                                Icon(Icons.question_mark_sharp),
+                                SizedBox(width: 15.0),
+                                Text(
+                                  "Sign In With Google",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
+                          const SizedBox(
+                            height: 30,
+                          ),
+                          Text(
+                            'Or With Email',
+                            style: TextStyle(color: Colors.white),
+                          )
                         ],
                       ),
                     )
