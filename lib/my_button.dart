@@ -12,7 +12,8 @@ class MyButton extends StatelessWidget {
         child: InkWell(
           child: Container(
             height: 50,
-            width: 50,
+            width: 200,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(8.0)),
           ),
         ),
       ),
