@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tech/my_button.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
@@ -10,7 +11,7 @@ class SignIn extends StatefulWidget {
 class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Color(0xFF1A1B35),
       body: Column(
         children: [
@@ -21,7 +22,7 @@ class _SignInState extends State<SignIn> {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Center(
+                    Center(
                       child: Text(
                         'Sign In',
                         style: TextStyle(
@@ -31,34 +32,28 @@ class _SignInState extends State<SignIn> {
                         ),
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       height: 20,
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 80.0),
+                      padding: EdgeInsets.symmetric(horizontal: 80.0),
                       child: Column(
                         children: [
-                          ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.orange,
-                              minimumSize: const Size(double.infinity, 60),
-                            ),
-                            child: const Row(
-                              children: [
-                                Icon(Icons.question_mark_sharp),
-                                SizedBox(width: 15.0),
-                                Text(
-                                  "Sign In With Google",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
+                          MyButton(),
+                          // Row(
+                          //   children: [
+                          //     Icon(Icons.question_mark_sharp),
+                          //     SizedBox(width: 15.0),
+                          //     Text(
+                          //       "Sign In With Google",
+                          //       style: TextStyle(
+                          //         color: Colors.white,
+                          //         fontSize: 18,
+                          //       ),
+                          //     ),
+                          //   ],
+                          // ),
+                          SizedBox(
                             height: 30,
                           ),
                           Text(
