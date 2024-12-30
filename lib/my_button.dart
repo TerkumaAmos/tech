@@ -13,7 +13,18 @@ class MyButton extends StatelessWidget {
           child: Container(
             height: 50,
             width: 200,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(8.0)),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8.0),
+            ),
+            child: const Row(
+              children: [
+                Icon(Icons.question_answer),
+                SizedBox(
+                  width: 8,
+                ),
+                Text('Sign in With Google'),
+              ],
+            ),
           ),
         ),
       ),
