@@ -11,7 +11,7 @@ class SignIn extends StatefulWidget {
 class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Color(0xFF1A1B35),
       body: Column(
         children: [
@@ -22,7 +22,7 @@ class _SignInState extends State<SignIn> {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Center(
+                    const Center(
                       child: Text(
                         'Sign In',
                         style: TextStyle(
@@ -32,7 +32,7 @@ class _SignInState extends State<SignIn> {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Padding(
@@ -53,12 +53,23 @@ class _SignInState extends State<SignIn> {
                           //     ),
                           //   ],
                           // ),
-                          SizedBox(
+                          const SizedBox(
                             height: 30,
                           ),
-                          Text(
+                          const Text(
                             'Or With Email',
                             style: TextStyle(color: Colors.white),
+                          ),
+                          Container(
+                            color: Colors.white,
+                            child: const Row(
+                              children: [
+                                Text(
+                                  'Your Email',
+                                  style: TextStyle(color: Colors.orange),
+                                ),
+                              ],
+                            ),
                           )
                         ],
                       ),
