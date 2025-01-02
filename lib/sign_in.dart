@@ -17,13 +17,13 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xFF1A1B35),
+        backgroundColor: const Color(0xFF1A1B35),
         body: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            SizedBox(
+            const SizedBox(
               height: 300,
             ),
-            Center(
+            const Center(
               child: Text(
                 'Sign In',
                 style: TextStyle(
@@ -35,11 +35,11 @@ class _SignInState extends State<SignIn> {
             ),
             Expanded(
               child: SingleChildScrollView(
-                padding: EdgeInsets.all(2),
+                padding: const EdgeInsets.all(2),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    MyButton(),
+                    const MyButton(),
                     // Row(
                     //   children: [
                     //     Icon(Icons.question_mark_sharp),
@@ -53,7 +53,7 @@ class _SignInState extends State<SignIn> {
                     //     ),
                     //   ],
                     // ),
-                    SizedBox(
+                    const SizedBox(
                       height: 30,
                     ),
                     const Text(
@@ -66,14 +66,14 @@ class _SignInState extends State<SignIn> {
                         hintText: 'Your Password',
                         controller: passwordController),
                     GestureDetector(
-                      child: Icon(
+                      child: const Icon(
                         Icons.question_answer,
                         size: 100,
                       ),
                       onTap: () {
                         log(" Message ${emailController.text} ${passwordController.text}");
                       },
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -96,7 +96,7 @@ class AppTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       decoration: InputDecoration(
-        border: OutlineInputBorder(
+        border: const OutlineInputBorder(
           borderRadius: BorderRadius.all(
             Radius.circular(40),
           ),
