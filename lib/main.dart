@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tech/homepage.dart';
 import 'package:tech/sign_in.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
           backgroundColor: Color(0xFF1A1B35), // Dark blue background
-          body: SignIn()
+          body: MyHomePage()
           // Column(
           //   children: [
           //     Expanded(
