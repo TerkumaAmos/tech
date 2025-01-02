@@ -42,7 +42,7 @@ class _MyAppState extends State<MyApp> {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(15.0),
                           child: Image.asset(
-                            'assets/web1.jpeg',
+                            'assets/fag1.jpeg',
                             color: Colors.blue.withOpacity(0.5),
                             colorBlendMode: BlendMode.softLight,
                             width: 500,
