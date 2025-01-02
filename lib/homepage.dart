@@ -13,7 +13,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    _textEditingController.text = 'Your email';
+    //_textEditingController.text = '';
   }
 
   @override
@@ -22,7 +22,17 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('Hello'),
       ),
-      body: Padding(padding: EdgeInsets.all(18)),
+      body: Padding(
+        padding: EdgeInsets.all(18),
+        child: Column(
+          children: [
+            TextField(
+              controller: _textEditingController,
+              decoration: InputDecoration(labelText: 'Your Email'),
+            )
+          ],
+        ),
+      ),
     );
   }
 }

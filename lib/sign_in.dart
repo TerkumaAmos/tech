@@ -60,7 +60,10 @@ class _SignInState extends State<SignIn> {
                             'Or With Email',
                             style: TextStyle(color: Colors.white),
                           ),
-                          TextField()
+                          TextField(
+                            decoration:
+                                InputDecoration(labelText: 'Your Email'),
+                          )
                         ],
                       ),
                     )
