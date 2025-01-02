@@ -56,7 +56,7 @@ class _SignInState extends State<SignIn> {
                     SizedBox(
                       height: 30,
                     ),
-                    Text(
+                    const Text(
                       'Or With Email',
                       style: TextStyle(color: Colors.white),
                     ),
