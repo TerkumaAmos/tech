@@ -8,7 +8,7 @@ class MyButton extends StatelessWidget {
     return Center(
       child: Material(
         elevation: 8.0,
-        borderRadius: BorderRadius.circular(20.0),
+        borderRadius: BorderRadius.circular(200.0),
         child: InkWell(
           child: Container(
             height: 50,

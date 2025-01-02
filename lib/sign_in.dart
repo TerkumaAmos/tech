@@ -19,66 +19,74 @@ class _SignInState extends State<SignIn> {
     return Scaffold(
         backgroundColor: const Color(0xFF1A1B35),
         body: Center(
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            const SizedBox(
-              height: 300,
-            ),
-            const Center(
-              child: Text(
-                'Sign In',
-                style: TextStyle(
-                  color: Colors.orange,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(
+                height: 300,
+              ),
+              const Center(
+                child: Text(
+                  'Sign In',
+                  style: TextStyle(
+                    color: Colors.orange,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-            ),
-            Expanded(
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.all(2),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const MyButton(),
-                    // Row(
-                    //   children: [
-                    //     Icon(Icons.question_mark_sharp),
-                    //     SizedBox(width: 15.0),
-                    //     Text(
-                    //       "Sign In With Google",
-                    //       style: TextStyle(
-                    //         color: Colors.white,
-                    //         fontSize: 18,
-                    //       ),
-                    //     ),
-                    //   ],
-                    // ),
-                    const SizedBox(
-                      height: 30,
-                    ),
-                    const Text(
-                      'Or With Email',
-                      style: TextStyle(color: Colors.white),
-                    ),
-                    AppTextField(
-                        hintText: 'Your Email', controller: emailController),
-                    AppTextField(
-                        hintText: 'Your Password',
-                        controller: passwordController),
-                    GestureDetector(
-                      child: const Icon(
-                        Icons.question_answer,
-                        size: 100,
+              Expanded(
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.all(2),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const MyButton(),
+                      // Row(
+                      //   children: [
+                      //     Icon(Icons.question_mark_sharp),
+                      //     SizedBox(width: 15.0),
+                      //     Text(
+                      //       "Sign In With Google",
+                      //       style: TextStyle(
+                      //         color: Colors.white,
+                      //         fontSize: 18,
+                      //       ),
+                      //     ),
+                      //   ],
+                      // ),
+                      const SizedBox(
+                        height: 30,
                       ),
-                      onTap: () {
-                        log(" Message ${emailController.text} ${passwordController.text}");
-                      },
-                    ),
-                  ],
+                      const Text(
+                        'Or With Email',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      AppTextField(
+                        hintText: 'Your Email',
+                        controller: emailController,
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      AppTextField(
+                          hintText: 'Your Password',
+                          controller: passwordController),
+                      // GestureDetector(
+                      //   child: const Icon(
+                      //     Icons.question_answer,
+                      //     size: 100,
+                      //   ),
+                      //   onTap: () {
+                      //     log(" Message  ${passwordController.text}");
+                      //   },
+                      // ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ]),
+            ],
+          ),
         ));
   }
 }
@@ -95,6 +103,7 @@ class AppTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      style: TextStyle(color: Colors.red),
       decoration: InputDecoration(
         border: const OutlineInputBorder(
           borderRadius: BorderRadius.all(
