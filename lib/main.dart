@@ -48,14 +48,6 @@ class _MyAppState extends State<MyApp> {
                                 fit: BoxFit.cover,
                               ),
                             ),
-                            // child: Image.asset(
-                            //   'assets/fag1.jpeg',
-                            //   color: Colors.blue.withOpacity(0.5),
-                            //   colorBlendMode: BlendMode.softLight,
-                            //   width: 500,
-                            //   height: 500,
-                            //   fit: BoxFit.fill,
-                            // ),
                           ),
                         ),
                         Container(

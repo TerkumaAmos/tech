@@ -42,19 +42,6 @@ class _SignInState extends State<SignIn> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const MyButton(),
-                      // Row(
-                      //   children: [
-                      //     Icon(Icons.question_mark_sharp),
-                      //     SizedBox(width: 15.0),
-                      //     Text(
-                      //       "Sign In With Google",
-                      //       style: TextStyle(
-                      //         color: Colors.white,
-                      //         fontSize: 18,
-                      //       ),
-                      //     ),
-                      //   ],
-                      // ),
                       const SizedBox(
                         height: 30,
                       ),
@@ -72,15 +59,15 @@ class _SignInState extends State<SignIn> {
                       AppTextField(
                           hintText: 'Your Password',
                           controller: passwordController),
-                      // GestureDetector(
-                      //   child: const Icon(
-                      //     Icons.question_answer,
-                      //     size: 100,
-                      //   ),
-                      //   onTap: () {
-                      //     log(" Message  ${passwordController.text}");
-                      //   },
-                      // ),
+                      GestureDetector(
+                        child: const Icon(
+                          Icons.question_answer,
+                          size: 100,
+                        ),
+                        onTap: () {
+                          log(" Message  ${passwordController.text}");
+                        },
+                      ),
                     ],
                   ),
                 ),
