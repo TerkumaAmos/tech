@@ -41,13 +41,33 @@ class _MyAppState extends State<MyApp> {
                         // Add your illustration here using Image.asset
                         ClipRRect(
                           borderRadius: BorderRadius.circular(15.0),
-                          child: Image.asset(
-                            'assets/fag1.jpeg',
-                            color: Colors.blue.withOpacity(0.5),
-                            colorBlendMode: BlendMode.softLight,
-                            width: 500,
-                            height: 500,
-                            fit: BoxFit.fill,
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage('assets/fag1.jpeg'),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                            // child: Image.asset(
+                            //   'assets/fag1.jpeg',
+                            //   color: Colors.blue.withOpacity(0.5),
+                            //   colorBlendMode: BlendMode.softLight,
+                            //   width: 500,
+                            //   height: 500,
+                            //   fit: BoxFit.fill,
+                            // ),
+                          ),
+                        ),
+                        Container(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                Colors.transparent,
+                                Colors.black.withOpacity(0.7)
+                              ],
+                              begin: Alignment.topCenter,
+                              end: Alignment.bottomCenter,
+                            ),
                           ),
                         ),
                       ],
