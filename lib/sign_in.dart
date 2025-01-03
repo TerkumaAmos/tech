@@ -41,7 +41,10 @@ class _SignInState extends State<SignIn> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const MyButton(),
+                      MyButton(
+                        onTap: () {},
+                        label: 'click me',
+                      ),
                       const SizedBox(
                         height: 30,
                       ),
@@ -56,9 +59,7 @@ class _SignInState extends State<SignIn> {
                       const SizedBox(
                         height: 20,
                       ),
-                      AppTextField(
-                          hintText: 'Your Password',
-                          controller: passwordController),
+                      Password(passwordController: passwordController),
                       GestureDetector(
                         child: const Icon(
                           Icons.question_answer,
@@ -78,27 +79,68 @@ class _SignInState extends State<SignIn> {
   }
 }
 
+class Password extends StatefulWidget {
+  const Password({
+    super.key,
+    required this.passwordController,
+  });
+
+  final TextEditingController passwordController;
+
+  @override
+  State<Password> createState() => _PasswordState();
+}
+
+class _PasswordState extends State<Password> {
+  bool showPassword = true;
+
+  void _toggleVisibility() {
+    setState(() {
+      showPassword = !showPassword;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AppTextField(
+        obscureText: showPassword,
+        suffixIcon: IconButton(
+          icon: Icon(
+            showPassword ? Icons.visibility : Icons.visibility_off,
+          ),
+          onPressed: _toggleVisibility,
+        ),
+        hintText: 'Your Password',
+        controller: widget.passwordController);
+  }
+}
+
 class AppTextField extends StatelessWidget {
   const AppTextField({
     super.key,
     required this.hintText,
     required this.controller,
+    this.suffixIcon,
+    this.obscureText = false,
   });
 
   final String hintText;
+  final Widget? suffixIcon;
   final TextEditingController controller;
+  final bool obscureText;
   @override
   Widget build(BuildContext context) {
     return TextField(
-      style: TextStyle(color: Colors.red),
+      obscureText: obscureText,
+      style: const TextStyle(color: Colors.red),
       decoration: InputDecoration(
-        border: const OutlineInputBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(40),
+          border: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(40),
+            ),
           ),
-        ),
-        hintText: hintText,
-      ),
+          hintText: hintText,
+          suffixIcon: suffixIcon),
       controller: controller,
     );
   }
