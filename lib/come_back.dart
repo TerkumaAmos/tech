@@ -17,6 +17,7 @@ class _ComeBackState extends State<ComeBack> {
     _controller = TextEditingController(); // Initialize the controller
   }
 
+// whats the use of the above and below
   @override
   void dispose() {
     _controller
@@ -48,10 +49,13 @@ class _ComeBackState extends State<ComeBack> {
             ),
             const SizedBox(height: 25),
             const Text(
-              'Flutter Fairy',
-              style: TextStyle(color: Colors.yellow, fontSize: 40, height: 1.0),
+              'Flutter Presido ',
+              style: TextStyle(color: Colors.yellow, fontSize: 30, height: 1.0),
             ),
-            AppTextField(hintText: 'Your', controller: _controller),
+            const SizedBox(
+              height: 30,
+            ),
+            AppTextField(hintText: 'Your Username', controller: _controller),
           ],
         ),
       ),
