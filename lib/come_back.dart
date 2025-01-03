@@ -13,7 +13,7 @@ class ComeBack extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SizedBox(
-              height: 102,
+              height: 120,
             ),
             CircleAvatar(
               radius: 60,
@@ -27,7 +27,7 @@ class ComeBack extends StatelessWidget {
             Text(
               'Flutter Fairy',
               style: TextStyle(color: Colors.blue, fontSize: 40, height: 1.0),
-            )
+            ),
           ],
         ),
       ),
