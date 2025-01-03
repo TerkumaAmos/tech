@@ -1,33 +1,57 @@
 import 'package:flutter/material.dart';
+import 'package:tech/app_text.dart';
 
-class ComeBack extends StatelessWidget {
+class ComeBack extends StatefulWidget {
   const ComeBack({super.key});
 
   @override
+  State<ComeBack> createState() => _ComeBackState();
+}
+
+class _ComeBackState extends State<ComeBack> {
+  late TextEditingController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = TextEditingController(); // Initialize the controller
+  }
+
+  @override
+  void dispose() {
+    _controller
+        .dispose(); // Dispose of the controller when the widget is removed
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Color(0xFF1A1B35), // Dark blue background
+    return Scaffold(
+      backgroundColor: const Color(0xFF1A1B35),
+      // Dark blue background
 
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(
+            const SizedBox(
               height: 120,
             ),
-            CircleAvatar(
+            const CircleAvatar(
               radius: 60,
+              backgroundImage: AssetImage('assets/amos1.jpeg'),
             ),
-            SizedBox(height: 8),
-            Text(
+            const SizedBox(height: 30),
+            const Text(
               'Welcome Back',
-              style: TextStyle(color: Colors.blue, fontSize: 40, height: 1.0),
+              style: TextStyle(color: Colors.white, fontSize: 20, height: 1.0),
             ),
-            SizedBox(height: 25),
-            Text(
+            const SizedBox(height: 25),
+            const Text(
               'Flutter Fairy',
-              style: TextStyle(color: Colors.blue, fontSize: 40, height: 1.0),
+              style: TextStyle(color: Colors.yellow, fontSize: 40, height: 1.0),
             ),
+            AppTextField(hintText: 'Your', controller: _controller),
           ],
         ),
       ),

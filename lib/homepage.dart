@@ -20,15 +20,15 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hello'),
+        title: const Text('Hello'),
       ),
       body: Padding(
-        padding: EdgeInsets.all(18),
+        padding: const EdgeInsets.all(18),
         child: Column(
           children: [
             TextField(
               controller: _textEditingController,
-              decoration: InputDecoration(labelText: 'Your Email'),
+              decoration: const InputDecoration(labelText: 'Your Email'),
             )
           ],
         ),
