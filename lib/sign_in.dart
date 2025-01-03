@@ -132,7 +132,7 @@ class AppTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       obscureText: obscureText,
-      style: const TextStyle(color: Colors.red),
+      style: const TextStyle(color: Colors.yellow),
       decoration: InputDecoration(
           border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(
