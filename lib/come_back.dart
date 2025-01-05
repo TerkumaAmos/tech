@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tech/app_text.dart';
+import 'package:tech/my_button.dart';
 
 class ComeBack extends StatefulWidget {
   const ComeBack({super.key});
@@ -33,7 +34,7 @@ class _ComeBackState extends State<ComeBack> {
 
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const SizedBox(
               height: 120,
@@ -55,14 +56,18 @@ class _ComeBackState extends State<ComeBack> {
             const SizedBox(
               height: 30,
             ),
-            AppTextField(hintText: 'Your Username', controller: _controller),
+            Container(
+                width: 400,
+                height: 50,
+                child: AppTextField(
+                    hintText: 'Your Username', controller: _controller)),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(width: 400, height: 50, child: MyButton(label: "Sign In"))
           ],
         ),
       ),
     );
   }
-}
-
-void main() {
-  runApp(MaterialApp(home: ComeBack()));
 }
