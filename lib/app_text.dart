@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 class AppTextField extends StatelessWidget {
   const AppTextField({
     super.key,
-    required this.hintText,
+    this.hintText,
     required this.controller,
     this.suffixIcon,
     this.obscureText = false,
   });
 
-  final String hintText;
+  final String? hintText;
   final Widget? suffixIcon;
   final TextEditingController controller;
   final bool obscureText;
