@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tech/come_back.dart';
 import 'package:tech/homepage.dart';
+import 'package:tech/practice.dart';
 import 'package:tech/sign_in.dart';
 import 'package:tech/sign_up_page.dart';
 
@@ -22,7 +23,7 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         home: // Dark blue background
 
-            SignUpPage()
+            Practice()
         // Container(
         //   decoration: const BoxDecoration(
         //       gradient: LinearGradient(
