@@ -5,6 +5,10 @@ class SignUpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(
+      home: Column(
+        children: [Text('Sign Up')],
+      ),
+    );
   }
 }
