@@ -24,7 +24,7 @@ class _PracticeState extends State<Practice> {
               controller: emaileditinggcontroller,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           newPassword(passwordeditingcontroller: passwordeditingcontroller),
@@ -51,14 +51,19 @@ class _newPasswordState extends State<newPassword> {
   @override
   Widget build(BuildContext context) {
     return AppTextField(
-        obscureText: _obscureText,
-        hintText: "Password",
-        controller: widget.passwordeditingcontroller,
-        suffixIcon: GestureDetector(
-          onTap: () {
-            _obscureText = true;
-          },
-          child: Icon(Icons.password_outlined),
-        ));
+      obscureText: _obscureText,
+      hintText: "Password",
+      controller: widget.passwordeditingcontroller,
+      suffixIcon: GestureDetector(
+        onTap: () {
+          setState(() {
+            _obscureText = !_obscureText;
+          });
+        },
+        child: const Icon(
+          Icons.password_outlined,
+        ),
+      ),
+    );
   }
 }

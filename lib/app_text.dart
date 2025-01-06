@@ -19,7 +19,7 @@ class AppTextField extends StatelessWidget {
       width: 300,
       child: TextField(
         obscureText: obscureText,
-        style: const TextStyle(color: Colors.yellow),
+        style: const TextStyle(color: Colors.black),
         decoration: InputDecoration(
             border: const OutlineInputBorder(
               borderRadius: BorderRadius.all(

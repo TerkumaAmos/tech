@@ -72,7 +72,7 @@ class _passwordState extends State<password> {
               _obscuretext = !_obscuretext;
             });
           },
-          child: Icon(
+          child: const Icon(
             Icons.password,
           )),
     );
