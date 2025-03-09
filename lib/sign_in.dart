@@ -44,7 +44,7 @@ class _SignInState extends State<SignIn> {
                     children: [
                       MyButton(
                         onTap: () {},
-                        label: 'click me',
+                        label: 'Sign in with Google',
                       ),
                       const SizedBox(
                         height: 30,
@@ -66,9 +66,9 @@ class _SignInState extends State<SignIn> {
                           Icons.question_answer,
                           size: 100,
                         ),
-                        onTap: () {
-                          log(" Message  ${passwordController.text}");
-                        },
+                        // onTap: () {
+                        //   log(" Message  ${passwordController.text}");
+                        // },
                       ),
                     ],
                   ),

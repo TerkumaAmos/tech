@@ -23,7 +23,7 @@ class _MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         home: // Dark blue background
 
-            Practice()
+            SignIn()
         // Container(
         //   decoration: const BoxDecoration(
         //       gradient: LinearGradient(

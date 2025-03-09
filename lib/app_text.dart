@@ -29,7 +29,7 @@ class AppTextField extends StatelessWidget {
             hintText: hintText,
             suffixIcon: suffixIcon,
             contentPadding:
-                EdgeInsets.symmetric(vertical: 4.0, horizontal: 10.0)),
+                const EdgeInsets.symmetric(vertical: 4.0, horizontal: 10.0)),
         controller: controller,
       ),
     );
